@@ -1,1 +1,13 @@
-especialidad{{form.servicio}}
+<form method="POST">
+    {% csrf_token %}
+    fecha{{form.fecha}}
+    <br>
+    especialidad{{form.especialidad}}
+    <br>
+    servicio{{form.servicio}}
+    <br>
+    profesional{{form.profesional}}
+    <br>
+    hora{{form.hora}}
+    <button type ="submit" >submit</button>
+</form> 
