@@ -23,7 +23,6 @@ class BarberiaCreateView(View):
         if request.method=="POST":
             form = TurnoCreateForm(request.POST)
             if form.is_valid():
-                print("hola mundo")
                 especialidad = form.cleaned_data.get('especialidad')
                 servicio = form.cleaned_data.get('servicio')
                 fecha = form.cleaned_data.get('fecha')
