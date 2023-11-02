@@ -68,9 +68,9 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'Estetica',
-            'USER': 'admin',
-            'PASSWORD': 'leylaoti23',
-            'HOST': 'DESKTOP-OM7B43P\SQLEXPRESS',
+            'USER': 'elAdmin',
+            'PASSWORD': 'Mateo.123',
+            'HOST': '192.168.1.41',
             'PORT': '3306',
         }
 }
