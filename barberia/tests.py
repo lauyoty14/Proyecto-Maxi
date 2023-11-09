@@ -1,10 +1,13 @@
-import unittest
 from django.test import TestCase
 from models import Turno
-import os
+import unittest
 import django
 import os
 import sys
+
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 # Agrega la ruta del proyecto Django a sys.path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

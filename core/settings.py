@@ -16,6 +16,9 @@ DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200',  # Agrega aquí los orígenes permitidos (puedes agregar múltiples orígenes)
+]
 
 # Application definition
 
@@ -28,9 +31,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'barberia',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -68,9 +73,10 @@ DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'Estetica',
-            'USER': 'elAdmin',
-            'PASSWORD': 'Mateo.123',
-            'HOST': '192.168.1.41',
+            'USER': 'admin',
+            'PASSWORD': '123',
+
+            'HOST': 'localhost',
             'PORT': '3306',
         }
 }
