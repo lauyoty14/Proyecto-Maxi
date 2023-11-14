@@ -16,8 +16,18 @@ DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = ["*"]
 
+CORS_ORIGIN_ALLOW_ALL = True
+
+# settings.py
+
+CSRF_COOKIE_SECURE = True
+CSRF_USE_SESSIONS = True
+
+
+
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:4200',  # Agrega aquí los orígenes permitidos (puedes agregar múltiples orígenes)
+    "http://localhost:4200",
+    # Otras URLs permitidas si es necesario
 ]
 
 # Application definition
@@ -31,11 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'barberia',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -43,7 +51,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', 
 ]
+
 
 ROOT_URLCONF = 'core.urls'
 
@@ -75,7 +85,6 @@ DATABASES = {
             'NAME': 'Estetica',
             'USER': 'admin',
             'PASSWORD': '123',
-
             'HOST': 'localhost',
             'PORT': '3306',
         }
