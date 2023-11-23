@@ -1,2 +1,16 @@
 django==4.2.4
 django-environ==0.10.0 
+asgiref==3.7.2
+distlib==0.3.7
+django-cors-headers==4.3.0
+djangorestframework==3.14.0
+environ==1.0
+filelock==3.13.1
+mysqlclient==2.2.0
+numpy==1.26.1
+pandas==2.1.2
+pip==23.3.1
+platformdirs==3.11.0
+pyodbc==4.0.39
+python-dateutil==2.8.2
+pytz==2023.3.post1
